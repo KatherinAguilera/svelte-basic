@@ -2,6 +2,8 @@
   import About from "./components/About.svelte"  // traemos componente about se debe colocar eñ .svelte
   import Text from "./components/Text.svelte"
   import Person from "./components/Person.svelte"
+  import Skills from "./components/Skills.svelte"
+
 
 	export let name;
   export let lastName ; // export traer/pasar como propiedad al documento
@@ -18,11 +20,11 @@
 </script>
 
 
-
-
 <main>
-	<h1>Hello {name} {lastName}!</h1>
+  <h1>Hello {name} {lastName}!</h1>
   <About/>
+  <Skills/>
+
   <!-- Asigno props a mo componente -->
   <Text anotherText="Pasando Props desde mi componente Text"/>
   <!-- Toma props declarado por defecto sino le asigno nada -->
@@ -39,8 +41,8 @@
   }
 
   :global(:root) {
-    --color-lightMode: purple;
-    --color-darkMode: #ffffff;
+    --color-lightMode: #E76F51;
+    --color-darkMode: #fbfbfb;
 
   }
   :global(body.dark-mode){
@@ -49,8 +51,7 @@
   }
   main {
     text-align: center;
-    padding: 1em;
-    max-width: 240px;
+
     margin: 0 auto;
   }
 

@@ -9,7 +9,9 @@
   }
 
   function toggle(){
+    // si es false pase a true
     styles.darkMode = !styles.darkMode;
+    // tabajando con el DOM
     window.document.body.classList.toggle("dark-mode");
   }
 </script>
@@ -52,7 +54,7 @@
 <div class="About">
 
 <!-- condicional if con svelte -->
-{#if !styles.darkMode}
+  {#if !styles.darkMode}
     <p class="text-lightMode">{someText}</p>
     {:else}
       <p class="text-darkMode">
