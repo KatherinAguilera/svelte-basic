@@ -1,14 +1,33 @@
 <script>
   import About from "./components/About.svelte"  // traemos componente about se debe colocar eñ .svelte
+  import Text from "./components/Text.svelte"
+  import Person from "./components/Person.svelte"
+
 	export let name;
-	export let lastName ; // export traer/pasar como propiedad al documento
+  export let lastName ; // export traer/pasar como propiedad al documento
+
   let svelteLogo = "https://arepa.s3.amazonaws.com/svelte-logo.png";
 
+// Pasar objeto al componente Person
+  const data = {
+    namePet: 'Haru',
+    pet : 'Gata',
+    age: 1
+  }
+
 </script>
+
+
+
 
 <main>
 	<h1>Hello {name} {lastName}!</h1>
   <About/>
+  <!-- Asigno props a mo componente -->
+  <Text anotherText="Pasando Props desde mi componente Text"/>
+  <!-- Toma props declarado por defecto sino le asigno nada -->
+  <Text/>
+  <Person {...data}/>
   <img src={svelteLogo} alt="Svelte" />
 </main>
 

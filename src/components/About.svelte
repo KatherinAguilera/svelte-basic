@@ -12,6 +12,8 @@
 <style>
   p{
     color:var(--theme-color);
+    font-size: 2rem;
+    font-weight: 500;
   }
 </style>
 
