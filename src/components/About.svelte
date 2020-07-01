@@ -1,5 +1,6 @@
 <!-- Logica -->
 <script>
+  import Button from './Button.svelte'
   let someText = "Frontend Developer";
   let count = 0;
   let styles = {darkMode : false}
@@ -61,6 +62,12 @@
         Hello Dark Mode
       </p>
   {/if}
+  <Button
+    text="Click"
+    count={count}
+    on:click={handleClick}
+    
+  />
   <button on:click={handleClick} class={styles.darkMode ? 'btn-lightMode' : ' btn-darkMode'}>Click{count === 0 ? '' : count}</button>
   <button on:click={toggle} class={styles.darkMode ? 'btn-lightMode' : ' btn-darkMode'}>DarkMode {styles.darkMode ? '🌘' : '🌞'}</button>
 </div>
