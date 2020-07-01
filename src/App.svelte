@@ -34,12 +34,18 @@
 <style>
 /* Definicion de estilos globales */
   :global(body) {
-    background-color: #ddceca;
-    color: #0084f6;
+    background-color: #e1eacd;
+    color: #01352c;
   }
 
   :global(:root) {
-    --theme-color: purple;
+    --color-lightMode: purple;
+    --color-darkMode: #ffffff;
+
+  }
+  :global(body.dark-mode){
+    background: #01352c;
+    color: #bfc2c7;
   }
   main {
     text-align: center;
@@ -53,7 +59,7 @@
   }
 
   h1 {
-    color: #ff3e00;
+    color: #61b390;
     text-transform: uppercase;
     font-size: 4em;
     font-weight: 100;
