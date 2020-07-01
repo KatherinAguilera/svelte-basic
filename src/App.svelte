@@ -1,4 +1,5 @@
 <script>
+  import About from "./components/About.svelte"  // traemos componente about se debe colocar eñ .svelte
 	export let name;
 	export let lastName ; // export traer/pasar como propiedad al documento
   let svelteLogo = "https://arepa.s3.amazonaws.com/svelte-logo.png";
@@ -7,7 +8,7 @@
 
 <main>
 	<h1>Hello {name} {lastName}!</h1>
-	<p>Frontend Developer</p>
+  <About/>
   <img src={svelteLogo} alt="Svelte" />
 </main>
 
@@ -21,12 +22,6 @@
   :global(:root) {
     --theme-color: purple;
   }
-
-  p {
-    color: var(--theme-color);
-    font-size: 22px;
-  }
-
   main {
     text-align: center;
     padding: 1em;
