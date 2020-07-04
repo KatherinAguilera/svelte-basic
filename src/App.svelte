@@ -4,7 +4,8 @@
   import Person from "./components/Person.svelte"
   import Skills from "./components/Skills.svelte"
   import Input from "./components/Input.svelte"
-
+  import  Photos from "./components/Photos.svelte"
+  import  ButtonCount from "./components/ButtonCount.svelte"
 
 	export let name;
   export let lastName ; // export traer/pasar como propiedad al documento
@@ -32,6 +33,8 @@
   <Text/>
   <Person {...data}/>
   <Input/>
+  <Photos/>
+  <ButtonCount/>
   <img src={svelteLogo} alt="Svelte" />
 </main>
 

@@ -66,7 +66,7 @@
     text="Click"
     count={count}
     on:click={handleClick}
-    
+
   />
   <button on:click={handleClick} class={styles.darkMode ? 'btn-lightMode' : ' btn-darkMode'}>Click{count === 0 ? '' : count}</button>
   <button on:click={toggle} class={styles.darkMode ? 'btn-lightMode' : ' btn-darkMode'}>DarkMode {styles.darkMode ? '🌘' : '🌞'}</button>
